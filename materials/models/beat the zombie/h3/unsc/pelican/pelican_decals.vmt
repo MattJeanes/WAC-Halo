@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Beat the zombie/H3/UNSC/Pelican/pelican_decals"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+}

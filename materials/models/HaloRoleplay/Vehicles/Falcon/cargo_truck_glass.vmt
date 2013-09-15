@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/HaloRoleplay/Vehicles/Falcon/cargo_truck_glass"
+	"$envmap" "env_cubemap"
+	"$envmaptint"	"[.5 .5 .5]"
+	"$phong" "1"
+	"$phongboost" "35"
+	"$phongexponent" "5"
+	"$phongalbedotint" "35"
+	"$phongfresnelranges" "[.5 .5 .5]"
+	"$model" "1"
+	"$translucent" "1"
+}

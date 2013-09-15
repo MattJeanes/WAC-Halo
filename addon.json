@@ -1,0 +1,10 @@
+{
+	"title"		:	"WAC Halo",
+	"type"		:	"vehicle",
+	"tags"		:	[ "fun", "realism" ],
+	"ignore"	:
+	[
+		"*.md",
+		"*.git*"
+	]
+}

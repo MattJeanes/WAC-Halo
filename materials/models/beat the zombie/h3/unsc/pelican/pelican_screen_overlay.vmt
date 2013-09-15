@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Beat the zombie/H3/UNSC/Pelican/pelican_screen_overlay"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+                "$selfillum" 1
+}

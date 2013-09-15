@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Beat the zombie/H3/UNSC/Pelican/pelican_window"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+	"$translucent" 1
+
+	"$model" "1"
+	"$phong" "1"
+	"$phongexponent" "12"
+	"$phongboost" "1"
+	"$phongalbedotint" "1"
+	"$phongtint" "[1 .85 .85]"
+	"$phongfresnelranges"	"[0.5 3 15]"
+
+	"$ambientocclusion" "1"
+	"$detail" "models/Beat the zombie/H3/UNSC/Pelican/glasswarp"
+	"$detailscale" "2"
+	"$detailblendfactor" ".3"
+	"$detailblendmode" "1"
+	"$color2" "[1, 1, 1]"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .5 .5 .5]"
+	"$envmapcontrast" "1"
+	"$envmapsaturation" "1"
+}
