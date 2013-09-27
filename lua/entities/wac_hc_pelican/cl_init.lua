@@ -12,7 +12,7 @@ function ENT:Think()
 	local throttle = self:GetNWFloat("up", 0)
 	local active = self:GetNWBool("active", false)
 	local ent=LocalPlayer():GetVehicle():GetNWEntity("wac_aircraft")
-	if active and throttle>0 and CurTime()>cureffect then
+	if self==ent and active and throttle>0 and CurTime()>cureffect then
 		cureffect=CurTime()+0.1
 		
 		local ed=EffectData()
