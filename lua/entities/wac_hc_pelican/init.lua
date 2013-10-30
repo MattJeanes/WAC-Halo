@@ -15,7 +15,9 @@ function ENT:SpawnFunction(ply, tr)
 	return ent
 end
 
-function ENT:CustomPhysicsUpdate(ph)
+function ENT:PhysicsUpdate(ph)
+	self:base("wac_hc_base").PhysicsUpdate(self,ph)
+	
 	if IsValid(ph) and not self.disabled then
 		if ph:GetVelocity():Length() > 700 then
 			self:SetBodygroup(1,0)

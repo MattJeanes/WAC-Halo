@@ -8,7 +8,7 @@ ENT.thirdPerson = {
 // heatwave
 local cureffect=0
 function ENT:Think()
-	self.BaseClass.Think(self)
+	self:base("wac_hc_base").Think(self)
 	local throttle = self:GetNWFloat("up", 0)
 	local active = self:GetNWBool("active", false)
 	local ent=LocalPlayer():GetVehicle():GetNWEntity("wac_aircraft")

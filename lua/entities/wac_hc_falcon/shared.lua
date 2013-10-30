@@ -2,81 +2,74 @@ if not wac then return end
 
 ENT.Base 				= "wac_hc_base"
 ENT.Type 				= "anim"
-
 ENT.PrintName			= "UH-144 Falcon"
 ENT.Author				= "Dr. Matt"
 ENT.Category			= wac.aircraft.spawnCategory
-ENT.Contact    			= ""
-ENT.Purpose 			= ""
-ENT.Instructions 		= ""
 ENT.Spawnable			= true
 ENT.AdminSpawnable	= true
 
 ENT.Model			= "models/HaloRoleplay/Vehicles/falcon.mdl"
-ENT.RotorPhModel	= "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel		= "models/HaloRoleplay/Vehicles/Falcon/rotor.mdl"
-ENT.BackRotorModel	= "models/HaloRoleplay/Vehicles/Falcon/rotor.mdl"
-ENT.TopRotorDir        = 1
-ENT.BackRotorDir	= 1
-ENT.TopRotorPos	= Vector(10.47,136,135) 
-ENT.BackRotorPos = Vector(10.47,-136,135)
 ENT.EngineForce	= 26
-ENT.Weight		= 47500
+ENT.Weight		= 15000
 ENT.SmokePos		= Vector(-89.32,0,116.79)
 ENT.FirePos		= Vector(-89.32,0,116.79)
-ENT.TwinBladed = true
 
-function ENT:AddSeatTable()
-    return{
-        [1]={
-            Pos=Vector(115.55,0,37),
-            ExitPos=Vector(115.55,80,10),
-            NoHud=true,
-            wep={wac.aircraft.getWeapon("No Weapon")},
-        },
-		[2]={
-            Pos=Vector(35.22,21.8,34.9),
-            ExitPos=Vector(50,100,10),
-			Ang=Angle(0,180,0),
-            NoHud=true,
-            wep={wac.aircraft.getWeapon("No Weapon")},
-        },
-		[3]={
-            Pos=Vector(35.22,-21.8,34.9),
-            ExitPos=Vector(50,-100,10),
-			Ang=Angle(0,180,0),
-            NoHud=true,
-            wep={wac.aircraft.getWeapon("No Weapon")},
-        },
-		[4]={
-            Pos=Vector(-39.98,-35,25),
-            ExitPos=Vector(-50,-100,10),
-			Ang=Angle(0,-90,0),
-            NoHud=true,
-            wep={wac.aircraft.getWeapon("No Weapon")},
-        },
-		[5]={
-            Pos=Vector(-39.98,35,25),
-            ExitPos=Vector(-50,100,10),
-			Ang=Angle(0,90,0),
-            NoHud=true,
-            wep={wac.aircraft.getWeapon("No Weapon")},
-        },
-    }
-end
+ENT.TopRotor = {
+	dir = 1,
+	pos = Vector(10.47,136,135),
+	model = "models/HaloRoleplay/Vehicles/Falcon/rotor.mdl"
+}
 
-function ENT:AddSounds()
-	self.Sound={
-		Start=CreateSound(self.Entity,"WAC/falcon/start.wav"),
-		Blades=CreateSound(self.Entity,"Falcon.External"),
-		Engine=CreateSound(self.Entity,"Falcon.Internal"),
-		MissileAlert=CreateSound(self.Entity,"HelicopterVehicle/MissileNearby.mp3"),
-		MissileShoot=CreateSound(self.Entity,"HelicopterVehicle/MissileShoot.mp3"),
-		MinorAlarm=CreateSound(self.Entity,"WAC/Heli/fire_alarm_tank.wav"),
-		LowHealth=CreateSound(self.Entity,"WAC/Heli/fire_alarm.wav"),
-		CrashAlarm=CreateSound(self.Entity,"WAC/Heli/FireSmoke.wav"),
-	}
-end
+ENT.TopRotor2 = {
+	dir = -1,
+	pos = Vector(10.47,-136,135),
+	angles = Angle(0,0,0),
+	model = "models/HaloRoleplay/Vehicles/Falcon/rotor.mdl"
+}
+
+ENT.BackRotor = {
+	dir = 1,
+	pos = Vector(0,0,18),
+	model = "models/props_junk/PopCan01a.mdl"
+}
+
+ENT.Seats = {
+	{
+		pos=Vector(115.55,0,37),
+		exit=Vector(115.55,80,10),
+	},
+	{
+		pos=Vector(35.22,21.8,34.9),
+		exit=Vector(50,100,10),
+		ang=Angle(0,180,0),
+	},
+	{
+		pos=Vector(35.22,-21.8,34.9),
+		exit=Vector(50,-100,10),
+		ang=Angle(0,180,0),
+	},
+	{
+		pos=Vector(-39.98,-35,25),
+		exit=Vector(-50,-100,10),
+		ang=Angle(0,-90,0),
+	},
+	{
+		pos=Vector(-39.98,35,25),
+		exit=Vector(-50,100,10),
+		ang=Angle(0,90,0),
+	},
+}
+
+ENT.Sounds = {
+	Start="WAC/falcon/start.wav",
+	Blades="WAC/falcon/external.wav",
+	Engine="WAC/falcon/internal.wav",
+	MissileAlert="HelicopterVehicle/MissileNearby.mp3",
+	MissileShoot="HelicopterVehicle/MissileShoot.mp3",
+	MinorAlarm="WAC/Heli/fire_alarm_tank.wav",
+	LowHealth="WAC/Heli/fire_alarm.wav",
+	CrashAlarm="WAC/Heli/FireSmoke.wav",
+}
 
 function ENT:DrawPilotHud() end
 function ENT:DrawWeaponSelection() end
