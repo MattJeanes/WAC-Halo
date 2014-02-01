@@ -4,7 +4,7 @@ ENT.Base 				= "wac_hc_base"
 ENT.Type 				= "anim"
 ENT.PrintName			= "D77H-TCI Pelican"
 ENT.Author				= "Dr. Matt"
-ENT.Category			= wac.aircraft.spawnCategory
+ENT.Category			= wac.aircraft.spawnCategoryC
 ENT.Spawnable			= true
 ENT.AdminSpawnable	= true
 
